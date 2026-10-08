@@ -1,0 +1,47 @@
+[package]
+name = "soplos-appimage-manager"
+version = "3.0.0-beta"
+description = "Soplos AppImage Manager"
+authors = ["Sergi Perich <info@soploslinux.com>"]
+license = "GPL-3.0-or-later"
+edition = "2021"
+
+[lib]
+name = "soplos_appimage_manager_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# No "devtools" feature here: Tauri already enables the inspector
+# automatically on debug builds (cfg(debug_assertions)); declaring the
+# feature would force it on in release builds too.
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-single-instance = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# GitHub/GitLab/Codeberg release API queries and direct/update downloads.
+ureq = "3"
+base64 = "0.22"
+# Parses the HTTP Last-Modified header for the direct-URL update check.
+httpdate = "1"
+# Watches ~/AppImages and ~/.local/share/applications so the list refreshes
+# itself when files change outside the app, same as the 2.x GFileMonitor.
+notify = "7"
+# Only used to send SIGTERM (std::process::Child::kill only sends SIGKILL),
+# so a timed-out AppImage runtime gets a chance to unmount its own FUSE
+# mountpoint before being forced. A SIGKILL mid-mount leaves the mountpoint
+# stuck, and anything touching it afterwards (list refresh, running the same
+# AppImage, closing it) hangs waiting on a FUSE connection nothing will ever
+# answer.
+libc = "0.2"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

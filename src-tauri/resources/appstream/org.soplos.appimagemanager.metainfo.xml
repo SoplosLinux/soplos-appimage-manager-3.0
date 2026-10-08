@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.soplos.appimagemanager</id>
+  <pkgname>soplos-appimage-manager</pkgname>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <project_group>org.soploslinux</project_group>
+
+  <name>Soplos AppImage Manager</name>
+  <summary>Manage and integrate AppImage applications</summary>
+
+  <description>
+    <p>
+      Soplos AppImage Manager integrates AppImage applications into the Soplos
+      Linux desktop. It moves AppImages to ~/AppImages/, extracts their icon
+      and metadata, creates menu entries for them, and checks GitHub, GitLab
+      and Codeberg for updates.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">org.soplos.appimagemanager.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>screenshot01.png</image>
+      <caption>Main window with the hero banner and an integrated AppImage</caption>
+    </screenshot>
+    <screenshot>
+      <image>screenshot02.png</image>
+      <caption>Editing an AppImage's name, version, description and categories</caption>
+    </screenshot>
+    <screenshot>
+      <image>screenshot03.png</image>
+      <caption>Choosing whether to move the original file or keep a copy when adding</caption>
+    </screenshot>
+    <screenshot>
+      <image>screenshot04.png</image>
+      <caption>Several AppImages integrated, each with its own icon, size and version</caption>
+    </screenshot>
+    <screenshot>
+      <image>screenshot05.png</image>
+      <caption>Trying to add an AppImage that's already installed</caption>
+    </screenshot>
+  </screenshots>
+
+  <provides>
+    <binary>soplos-appimage-manager</binary>
+  </provides>
+
+  <url type="homepage">https://soplos.org</url>
+
+  <developer id="org.soploslinux">
+    <name>Sergi Perich</name>
+  </developer>
+
+  <releases>
+    <release version="3.0.0-beta" date="2026-10-03">
+      <description>
+        <p>First beta of Soplos AppImage Manager 3.0. Detects already-installed AppImages instead of creating duplicates, shows errors in a visible dialog, and fixes a memory exhaustion bug in metadata extraction along with several process-isolation issues when launching AppImages.</p>
+      </description>
+    </release>
+    <release version="3.0.0-alpha" date="2026-10-03">
+      <description>
+        <p>Full architecture rewrite of Soplos AppImage Manager, from Python 3 and GTK3 to Tauri 2 with a Rust backend and a Svelte frontend.</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>

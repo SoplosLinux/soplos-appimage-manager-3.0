@@ -1,0 +1,114 @@
+{
+  "app": {
+    "title": "Менеджер AppImage Soplos"
+  },
+  "hero": {
+    "title": "Интегрируйте любой AppImage в рабочий стол",
+    "description": "Значки, пункты меню и проверка обновлений для ваших AppImage."
+  },
+  "common": {
+    "cancel": "Отмена",
+    "ok": "ОК",
+    "close": "Закрыть",
+    "save": "Сохранить"
+  },
+  "sidebar": {
+    "switchToLight": "Переключить на светлую тему",
+    "switchToDark": "Переключить на тёмную тему",
+    "aboutTooltip": "О программе Менеджер AppImage Soplos (F1)",
+    "language": "Язык"
+  },
+  "about": {
+    "version": "Версия {version}",
+    "tagline": "Менеджер интеграции AppImage для Soplos Linux",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Распространяется по лицензии GNU General Public License v3.0 или более поздней версии",
+    "website": "soplos.org"
+  },
+  "environment": {
+    "gnome": "GNOME",
+    "kde": "KDE Plasma",
+    "xfce": "XFCE",
+    "unknown": "Неизвестно",
+    "x11": "X11",
+    "wayland": "Wayland"
+  },
+  "appimage": {
+    "emptyTitle": "Нет установленных AppImage.",
+    "emptyHint": "Нажмите кнопку «+», чтобы добавить, или перетащите сюда файл .AppImage.",
+    "dropHint": "Отпустите, чтобы добавить этот AppImage",
+    "addTooltip": "Добавить AppImage",
+    "checkAllTooltip": "Проверить все обновления",
+    "integrate": "Интегрировать",
+    "run": "Запустить",
+    "properties": "Свойства",
+    "checkUpdate": "Проверить обновления",
+    "delete": "Удалить",
+    "type": "Тип",
+    "typeValue": "AppImage {type}",
+    "sizeAndVersion": "{size} МБ",
+    "sizeVersionSuffix": "  ·  v{version}",
+    "deleteConfirmTitle": "Удалить {name}?",
+    "deleteConfirmBody": "Это удалит файл AppImage и его пункт меню. Это действие нельзя отменить.",
+    "selectAppImage": "Выберите AppImage",
+    "appimageFilter": "Файлы AppImage",
+    "addingTitle": "Добавление AppImage…",
+    "addingHint": "Извлечение метаданных, подождите.",
+    "errorTitle": "Что-то пошло не так",
+    "alreadyInstalled": "Этот AppImage уже установлен.",
+    "addFailed": "Не удалось добавить этот AppImage.",
+    "integratingTitle": "Интеграция AppImage…",
+    "integratingHint": "Извлечение метаданных, подождите.",
+    "keepOriginal": "Сохранить исходный файл (копировать вместо перемещения)",
+    "moveOrCopyTitle": "Добавить {name}?",
+    "moveOrCopyBody": "Переместить в ~/AppImages/, или сохранить исходный файл и скопировать его?",
+    "moveOrCopyCopy": "Сохранить оригинал (копировать)",
+    "moveOrCopyMove": "Переместить",
+    "errorAdding": "Ошибка при добавлении AppImage",
+    "errorIntegrating": "Ошибка при интеграции AppImage",
+    "errorRunning": "Ошибка при запуске AppImage",
+    "errorDeleting": "Ошибка при удалении AppImage",
+    "errorSaving": "Ошибка при сохранении свойств",
+    "properties_": {
+      "title": "Свойства",
+      "name": "Название",
+      "version": "Версия",
+      "versionPlaceholder": "например, 1.2.3",
+      "description": "Описание",
+      "descriptionPlaceholder": "Краткое описание",
+      "categories": "Категории",
+      "runAsRootTitle": "Запускать от root",
+      "runAsRootHint": "Запуск через pkexec (требует аутентификации)",
+      "updateUrlTitle": "URL для обновлений",
+      "updateUrlHint": "Поддерживаемые источники для автоматических обновлений: URL проекта GitHub, GitLab или Codeberg, либо прямая ссылка, заканчивающаяся на .appimage",
+      "updateUrlPlaceholder": "https://github.com/user/repo или https://example.com/latest/App.AppImage"
+    },
+    "update_": {
+      "title": "Обновить",
+      "checking": "Проверка обновлений…",
+      "noSource": "Источник обновлений не настроен.",
+      "noSourceHint": "Добавьте URL GitHub, GitLab, Codeberg или прямую ссылку .appimage в Свойствах.",
+      "available": "Доступно обновление!",
+      "upToDate": "Уже актуальная версия.",
+      "checkError": "Не удалось проверить: {message}",
+      "downloading": "Загрузка обновления…",
+      "completed": "Обновление успешно завершено!",
+      "failed": "Обновление не удалось. {message}",
+      "updateNow": "Обновить сейчас",
+      "noUpdateSource": "Источник обновлений не настроен",
+      "noUpdateSourceHint": "Откройте Свойства и добавьте URL для обновлений: URL проекта GitHub, GitLab или Codeberg, либо прямую ссылку на файл .appimage. Либо установите appimageupdatetool, если в AppImage встроена информация об обновлениях."
+    },
+    "checkAll_": {
+      "title": "Проверить все обновления",
+      "checking": "Проверка {n} AppImage…",
+      "noneConfigured": "Ни для одного AppImage не настроен источник обновлений.",
+      "noneConfiguredHint": "Добавьте URL GitHub, GitLab, Codeberg или прямые ссылки в Свойствах.",
+      "summary": "{count} / {total} доступно обновлений",
+      "upToDateAll": "Все AppImage актуальны.",
+      "updateAll": "Обновить всё",
+      "updating": "Обновление…",
+      "updated": "Обновлено",
+      "complete": "Обновление завершено!"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "app": {
+    "title": "Soplos AppImage Manager"
+  },
+  "hero": {
+    "title": "Integrate any AppImage into your desktop",
+    "description": "Icons, menu entries and update checks for the apps you run as AppImages."
+  },
+  "common": {
+    "cancel": "Cancel",
+    "ok": "OK",
+    "close": "Close",
+    "save": "Save"
+  },
+  "sidebar": {
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme",
+    "aboutTooltip": "About Soplos AppImage Manager (F1)",
+    "language": "Language"
+  },
+  "about": {
+    "version": "Version {version}",
+    "tagline": "AppImage integration manager for Soplos Linux",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Licensed under the GNU General Public License v3.0 or later",
+    "website": "soplos.org"
+  },
+  "environment": {
+    "gnome": "GNOME",
+    "kde": "KDE Plasma",
+    "xfce": "XFCE",
+    "unknown": "Unknown",
+    "x11": "X11",
+    "wayland": "Wayland"
+  },
+  "appimage": {
+    "emptyTitle": "No AppImages installed.",
+    "emptyHint": "Click the \"+\" button to add one, or drag an .AppImage file here.",
+    "dropHint": "Drop to add this AppImage",
+    "addTooltip": "Add AppImage",
+    "checkAllTooltip": "Check all updates",
+    "integrate": "Integrate",
+    "run": "Run",
+    "properties": "Properties",
+    "checkUpdate": "Check for updates",
+    "delete": "Delete",
+    "type": "Type",
+    "typeValue": "AppImage {type}",
+    "sizeAndVersion": "{size} MB",
+    "sizeVersionSuffix": "  ·  v{version}",
+    "deleteConfirmTitle": "Delete {name}?",
+    "deleteConfirmBody": "This removes the AppImage file and its desktop entry. This cannot be undone.",
+    "selectAppImage": "Select an AppImage",
+    "appimageFilter": "AppImage files",
+    "addingTitle": "Adding AppImage…",
+    "addingHint": "Extracting metadata, please wait.",
+    "errorTitle": "Something went wrong",
+    "alreadyInstalled": "This AppImage is already installed.",
+    "addFailed": "Could not add this AppImage.",
+    "integratingTitle": "Integrating AppImage…",
+    "integratingHint": "Extracting metadata, please wait.",
+    "keepOriginal": "Keep the original file (copy instead of move)",
+    "moveOrCopyTitle": "Add {name}?",
+    "moveOrCopyBody": "Move it into ~/AppImages/, or keep the original file and copy it instead?",
+    "moveOrCopyCopy": "Keep Original (Copy)",
+    "moveOrCopyMove": "Move",
+    "errorAdding": "Error adding AppImage",
+    "errorIntegrating": "Error integrating AppImage",
+    "errorRunning": "Error running AppImage",
+    "errorDeleting": "Error deleting AppImage",
+    "errorSaving": "Error saving properties",
+    "properties_": {
+      "title": "Properties",
+      "name": "Name",
+      "version": "Version",
+      "versionPlaceholder": "e.g. 1.2.3",
+      "description": "Description",
+      "descriptionPlaceholder": "Short description",
+      "categories": "Categories",
+      "runAsRootTitle": "Run as root",
+      "runAsRootHint": "Launch with pkexec (requires authentication)",
+      "updateUrlTitle": "Update URL",
+      "updateUrlHint": "Supported sources for automatic updates: a GitHub, GitLab or Codeberg project URL, or a direct link ending in .appimage",
+      "updateUrlPlaceholder": "https://github.com/user/repo or https://example.com/latest/App.AppImage"
+    },
+    "update_": {
+      "title": "Update",
+      "checking": "Checking for updates…",
+      "noSource": "No update source configured.",
+      "noSourceHint": "Add a GitHub, GitLab, Codeberg URL or a direct .appimage link in Properties.",
+      "available": "Update available!",
+      "upToDate": "Already up to date.",
+      "checkError": "Could not check: {message}",
+      "downloading": "Downloading update…",
+      "completed": "Update completed successfully!",
+      "failed": "Update failed. {message}",
+      "updateNow": "Update Now",
+      "noUpdateSource": "No update source configured",
+      "noUpdateSourceHint": "Open Properties and add an update URL: a GitHub, GitLab or Codeberg project URL, or a direct link to the .appimage file. Or install appimageupdatetool if the AppImage has update info embedded."
+    },
+    "checkAll_": {
+      "title": "Check All Updates",
+      "checking": "Checking {n} AppImage(s) for updates…",
+      "noneConfigured": "No AppImages have update sources configured.",
+      "noneConfiguredHint": "Add GitHub, GitLab, Codeberg URLs or direct links in Properties.",
+      "summary": "{count} / {total} update(s) available",
+      "upToDateAll": "All AppImages are up to date.",
+      "updateAll": "Update All",
+      "updating": "Updating…",
+      "updated": "Updated",
+      "complete": "Update complete!"
+    }
+  }
+}

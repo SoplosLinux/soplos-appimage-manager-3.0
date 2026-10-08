@@ -1,0 +1,114 @@
+{
+  "app": {
+    "title": "Manager AppImage Soplos"
+  },
+  "hero": {
+    "title": "Integrează orice AppImage în desktopul tău",
+    "description": "Pictograme, intrări de meniu și verificare a actualizărilor pentru AppImage-urile tale."
+  },
+  "common": {
+    "cancel": "Anulează",
+    "ok": "OK",
+    "close": "Închide",
+    "save": "Salvează"
+  },
+  "sidebar": {
+    "switchToLight": "Comută la tema deschisă",
+    "switchToDark": "Comută la tema închisă",
+    "aboutTooltip": "Despre Manager AppImage Soplos (F1)",
+    "language": "Limbă"
+  },
+  "about": {
+    "version": "Versiunea {version}",
+    "tagline": "Manager de integrare AppImage pentru Soplos Linux",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Licențiat sub GNU General Public License v3.0 sau ulterioară",
+    "website": "soplos.org"
+  },
+  "environment": {
+    "gnome": "GNOME",
+    "kde": "KDE Plasma",
+    "xfce": "XFCE",
+    "unknown": "Necunoscut",
+    "x11": "X11",
+    "wayland": "Wayland"
+  },
+  "appimage": {
+    "emptyTitle": "Nicio AppImage instalată.",
+    "emptyHint": "Apasă butonul „+” pentru a adăuga una, sau trage aici un fișier .AppImage.",
+    "dropHint": "Eliberează pentru a adăuga această AppImage",
+    "addTooltip": "Adaugă AppImage",
+    "checkAllTooltip": "Verifică toate actualizările",
+    "integrate": "Integrează",
+    "run": "Rulează",
+    "properties": "Proprietăți",
+    "checkUpdate": "Verifică actualizările",
+    "delete": "Șterge",
+    "type": "Tip",
+    "typeValue": "AppImage {type}",
+    "sizeAndVersion": "{size} MB",
+    "sizeVersionSuffix": "  ·  v{version}",
+    "deleteConfirmTitle": "Ștergi {name}?",
+    "deleteConfirmBody": "Aceasta elimină fișierul AppImage și intrarea sa din meniu. Acțiunea nu poate fi anulată.",
+    "selectAppImage": "Selectează o AppImage",
+    "appimageFilter": "Fișiere AppImage",
+    "addingTitle": "Se adaugă AppImage…",
+    "addingHint": "Se extrag metadatele, te rugăm să aștepți.",
+    "errorTitle": "Ceva nu a funcționat",
+    "alreadyInstalled": "Acest AppImage este deja instalat.",
+    "addFailed": "Acest AppImage nu a putut fi adăugat.",
+    "integratingTitle": "Se integrează AppImage…",
+    "integratingHint": "Se extrag metadatele, te rugăm să aștepți.",
+    "keepOriginal": "Păstrează fișierul original (copiază în loc să muți)",
+    "moveOrCopyTitle": "Adaugi {name}?",
+    "moveOrCopyBody": "O muți în ~/AppImages/, sau păstrezi fișierul original și îl copiezi?",
+    "moveOrCopyCopy": "Păstrează originalul (copiază)",
+    "moveOrCopyMove": "Mută",
+    "errorAdding": "Eroare la adăugarea AppImage",
+    "errorIntegrating": "Eroare la integrarea AppImage",
+    "errorRunning": "Eroare la rularea AppImage",
+    "errorDeleting": "Eroare la ștergerea AppImage",
+    "errorSaving": "Eroare la salvarea proprietăților",
+    "properties_": {
+      "title": "Proprietăți",
+      "name": "Nume",
+      "version": "Versiune",
+      "versionPlaceholder": "ex. 1.2.3",
+      "description": "Descriere",
+      "descriptionPlaceholder": "Descriere scurtă",
+      "categories": "Categorii",
+      "runAsRootTitle": "Rulează ca root",
+      "runAsRootHint": "Pornește cu pkexec (necesită autentificare)",
+      "updateUrlTitle": "URL de actualizare",
+      "updateUrlHint": "Surse acceptate pentru actualizări automate: un URL de proiect GitHub, GitLab sau Codeberg, sau un link direct care se termină în .appimage",
+      "updateUrlPlaceholder": "https://github.com/utilizator/repo sau https://exemplu.com/latest/App.AppImage"
+    },
+    "update_": {
+      "title": "Actualizează",
+      "checking": "Se verifică actualizările…",
+      "noSource": "Nicio sursă de actualizare configurată.",
+      "noSourceHint": "Adaugă un URL GitHub, GitLab, Codeberg sau un link direct .appimage în Proprietăți.",
+      "available": "Actualizare disponibilă!",
+      "upToDate": "Deja actualizată.",
+      "checkError": "Nu s-a putut verifica: {message}",
+      "downloading": "Se descarcă actualizarea…",
+      "completed": "Actualizare finalizată cu succes!",
+      "failed": "Actualizarea a eșuat. {message}",
+      "updateNow": "Actualizează acum",
+      "noUpdateSource": "Nicio sursă de actualizare configurată",
+      "noUpdateSourceHint": "Deschide Proprietăți și adaugă un URL de actualizare: un URL de proiect GitHub, GitLab sau Codeberg, sau un link direct către fișierul .appimage. Sau instalează appimageupdatetool dacă AppImage are informații de actualizare încorporate."
+    },
+    "checkAll_": {
+      "title": "Verifică toate actualizările",
+      "checking": "Se verifică {n} AppImage…",
+      "noneConfigured": "Nicio AppImage nu are o sursă de actualizare configurată.",
+      "noneConfiguredHint": "Adaugă URL-uri GitHub, GitLab, Codeberg sau linkuri directe în Proprietăți.",
+      "summary": "{count} / {total} actualizare(i) disponibilă(e)",
+      "upToDateAll": "Toate AppImage-urile sunt actualizate.",
+      "updateAll": "Actualizează tot",
+      "updating": "Se actualizează…",
+      "updated": "Actualizată",
+      "complete": "Actualizare finalizată!"
+    }
+  }
+}

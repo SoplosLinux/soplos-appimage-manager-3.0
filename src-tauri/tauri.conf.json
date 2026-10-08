@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "soplos-appimage-manager",
+  "version": "3.0.0-beta",
+  "identifier": "org.soplos.appimagemanager",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1422",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Soplos AppImage Manager",
+        "width": 720,
+        "height": 560,
+        "minWidth": 560,
+        "minHeight": 420,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb"],
+    "publisher": "Sergi Perich",
+    "homepage": "https://soplos.org",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "GPL-3.0-or-later",
+    "licenseFile": "../LICENSE",
+    "category": "Utility",
+    "shortDescription": "Manage and integrate AppImage applications",
+    "longDescription": "Integrates AppImage applications into the Soplos Linux desktop. Moves AppImages to ~/AppImages/, extracts icons and metadata, creates .desktop entries, and checks GitHub, GitLab and Codeberg for updates.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png"
+    ],
+    "linux": {
+      "deb": {
+        "section": "utils",
+        "priority": "optional",
+        "recommends": ["p7zip-full", "binutils", "desktop-file-utils", "libgtk-3-bin"],
+        "desktopTemplate": "resources/debian/soplos-appimage-manager.desktop.hbs",
+        "files": {
+          "/usr/share/metainfo/org.soplos.appimagemanager.metainfo.xml": "resources/appstream/org.soplos.appimagemanager.metainfo.xml",
+          "/usr/share/doc/soplos-appimage-manager/copyright": "resources/debian/copyright"
+        }
+      }
+    }
+  }
+}

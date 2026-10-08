@@ -1,0 +1,114 @@
+{
+  "app": {
+    "title": "Soplos AppImage-Verwaltung"
+  },
+  "hero": {
+    "title": "Integriere jede AppImage in deinen Desktop",
+    "description": "Symbole, Menüeinträge und Update-Prüfungen für deine AppImages."
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "ok": "OK",
+    "close": "Schließen",
+    "save": "Speichern"
+  },
+  "sidebar": {
+    "switchToLight": "Zum hellen Thema wechseln",
+    "switchToDark": "Zum dunklen Thema wechseln",
+    "aboutTooltip": "Über Soplos AppImage-Verwaltung (F1)",
+    "language": "Sprache"
+  },
+  "about": {
+    "version": "Version {version}",
+    "tagline": "AppImage-Integrationsmanager für Soplos Linux",
+    "copyright": "Copyright © 2026 Sergi Perich",
+    "license": "Lizenziert unter der GNU General Public License v3.0 oder höher",
+    "website": "soplos.org"
+  },
+  "environment": {
+    "gnome": "GNOME",
+    "kde": "KDE Plasma",
+    "xfce": "XFCE",
+    "unknown": "Unbekannt",
+    "x11": "X11",
+    "wayland": "Wayland"
+  },
+  "appimage": {
+    "emptyTitle": "Keine AppImages installiert.",
+    "emptyHint": "Klicke auf die Schaltfläche „+“, um eine hinzuzufügen, oder ziehe eine .AppImage-Datei hierher.",
+    "dropHint": "Loslassen, um diese AppImage hinzuzufügen",
+    "addTooltip": "AppImage hinzufügen",
+    "checkAllTooltip": "Alle Updates prüfen",
+    "integrate": "Integrieren",
+    "run": "Starten",
+    "properties": "Eigenschaften",
+    "checkUpdate": "Nach Updates suchen",
+    "delete": "Löschen",
+    "type": "Typ",
+    "typeValue": "AppImage {type}",
+    "sizeAndVersion": "{size} MB",
+    "sizeVersionSuffix": "  ·  v{version}",
+    "deleteConfirmTitle": "{name} löschen?",
+    "deleteConfirmBody": "Dadurch werden die AppImage-Datei und ihr Menüeintrag entfernt. Dies kann nicht rückgängig gemacht werden.",
+    "selectAppImage": "AppImage auswählen",
+    "appimageFilter": "AppImage-Dateien",
+    "addingTitle": "AppImage wird hinzugefügt…",
+    "addingHint": "Metadaten werden extrahiert, bitte warten.",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "alreadyInstalled": "Dieses AppImage ist bereits installiert.",
+    "addFailed": "Dieses AppImage konnte nicht hinzugefügt werden.",
+    "integratingTitle": "AppImage wird integriert…",
+    "integratingHint": "Metadaten werden extrahiert, bitte warten.",
+    "keepOriginal": "Originaldatei behalten (kopieren statt verschieben)",
+    "moveOrCopyTitle": "{name} hinzufügen?",
+    "moveOrCopyBody": "Nach ~/AppImages/ verschieben, oder die Originaldatei behalten und stattdessen kopieren?",
+    "moveOrCopyCopy": "Original behalten (kopieren)",
+    "moveOrCopyMove": "Verschieben",
+    "errorAdding": "Fehler beim Hinzufügen der AppImage",
+    "errorIntegrating": "Fehler beim Integrieren der AppImage",
+    "errorRunning": "Fehler beim Starten der AppImage",
+    "errorDeleting": "Fehler beim Löschen der AppImage",
+    "errorSaving": "Fehler beim Speichern der Eigenschaften",
+    "properties_": {
+      "title": "Eigenschaften",
+      "name": "Name",
+      "version": "Version",
+      "versionPlaceholder": "z. B. 1.2.3",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Kurzbeschreibung",
+      "categories": "Kategorien",
+      "runAsRootTitle": "Als root ausführen",
+      "runAsRootHint": "Start mit pkexec (erfordert Authentifizierung)",
+      "updateUrlTitle": "Update-URL",
+      "updateUrlHint": "Unterstützte Quellen für automatische Updates: eine GitHub-, GitLab- oder Codeberg-Projekt-URL, oder ein direkter Link, der auf .appimage endet",
+      "updateUrlPlaceholder": "https://github.com/user/repo oder https://beispiel.com/latest/App.AppImage"
+    },
+    "update_": {
+      "title": "Aktualisieren",
+      "checking": "Nach Updates wird gesucht…",
+      "noSource": "Keine Update-Quelle konfiguriert.",
+      "noSourceHint": "Füge in den Eigenschaften eine GitHub-, GitLab-, Codeberg-URL oder einen direkten .appimage-Link hinzu.",
+      "available": "Update verfügbar!",
+      "upToDate": "Bereits aktuell.",
+      "checkError": "Prüfung fehlgeschlagen: {message}",
+      "downloading": "Update wird heruntergeladen…",
+      "completed": "Update erfolgreich abgeschlossen!",
+      "failed": "Update fehlgeschlagen. {message}",
+      "updateNow": "Jetzt aktualisieren",
+      "noUpdateSource": "Keine Update-Quelle konfiguriert",
+      "noUpdateSourceHint": "Öffne die Eigenschaften und füge eine Update-URL hinzu: eine GitHub-, GitLab- oder Codeberg-Projekt-URL, oder einen direkten Link zur .appimage-Datei. Oder installiere appimageupdatetool, falls die AppImage Update-Informationen eingebettet hat."
+    },
+    "checkAll_": {
+      "title": "Alle Updates prüfen",
+      "checking": "{n} AppImage(s) werden geprüft…",
+      "noneConfigured": "Für keine AppImage ist eine Update-Quelle konfiguriert.",
+      "noneConfiguredHint": "Füge in den Eigenschaften GitHub-, GitLab-, Codeberg-URLs oder direkte Links hinzu.",
+      "summary": "{count} / {total} Update(s) verfügbar",
+      "upToDateAll": "Alle AppImages sind aktuell.",
+      "updateAll": "Alle aktualisieren",
+      "updating": "Wird aktualisiert…",
+      "updated": "Aktualisiert",
+      "complete": "Aktualisierung abgeschlossen!"
+    }
+  }
+}
