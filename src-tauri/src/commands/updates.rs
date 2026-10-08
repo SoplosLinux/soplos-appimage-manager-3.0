@@ -325,9 +325,16 @@ fn download_update_blocking(downloadUrl: String, assetName: String, oldFilePath:
     }
     let tmp_path = new_path.with_extension("part");
 
+    // AppImages routinely run into the hundreds of MB to multiple GB —
+    // read_to_vec() both buffers the whole thing in memory AND enforces
+    // ureq's default 10MiB response body cap (the exact "larger than
+    // request limit: 10485760" error this used to fail with). Streaming
+    // straight from the response reader to the file avoids both: no
+    // in-memory copy of a multi-GB download, and no size ceiling at all.
     let mut resp = ureq::get(&downloadUrl).header("User-Agent", "soplos-appimage-manager/3.0").call().map_err(|e| e.to_string())?;
-    let bytes = resp.body_mut().read_to_vec().map_err(|e| e.to_string())?;
-    std::fs::write(&tmp_path, &bytes).map_err(|e| e.to_string())?;
+    let mut file = std::fs::File::create(&tmp_path).map_err(|e| e.to_string())?;
+    std::io::copy(&mut resp.body_mut().as_reader(), &mut file).map_err(|e| e.to_string())?;
+    drop(file);
 
     #[cfg(unix)]
     {

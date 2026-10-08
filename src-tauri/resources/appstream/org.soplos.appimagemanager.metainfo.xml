@@ -57,6 +57,10 @@
     <release version="3.0.0-beta" date="2026-10-03">
       <description>
         <p>First beta of Soplos AppImage Manager 3.0. Detects already-installed AppImages instead of creating duplicates, shows errors in a visible dialog, and fixes a memory exhaustion bug in metadata extraction along with several process-isolation issues when launching AppImages.</p>
+        <ul>
+          <li>Fixed downloading an update failing on any AppImage larger than 10MB</li>
+          <li>New app icon</li>
+        </ul>
       </description>
     </release>
     <release version="3.0.0-alpha" date="2026-10-03">
