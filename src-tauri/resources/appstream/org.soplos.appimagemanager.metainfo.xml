@@ -7,7 +7,24 @@
   <project_group>org.soploslinux</project_group>
 
   <name>Soplos AppImage Manager</name>
+  <name xml:lang="en">Soplos AppImage Manager</name>
+  <name xml:lang="es">Gestor de AppImage de Soplos</name>
+  <name xml:lang="fr">Gestionnaire d'AppImage de Soplos</name>
+  <name xml:lang="de">Soplos AppImage-Verwaltung</name>
+  <name xml:lang="pt">Gestor de AppImage do Soplos</name>
+  <name xml:lang="it">Gestore AppImage di Soplos</name>
+  <name xml:lang="ro">Manager AppImage Soplos</name>
+  <name xml:lang="ru">Менеджер AppImage Soplos</name>
+
   <summary>Manage and integrate AppImage applications</summary>
+  <summary xml:lang="en">Manage and integrate AppImage applications</summary>
+  <summary xml:lang="es">Gestionar e integrar aplicaciones AppImage en el escritorio</summary>
+  <summary xml:lang="fr">Gérer et intégrer les applications AppImage sur le bureau</summary>
+  <summary xml:lang="de">AppImage-Anwendungen auf dem Desktop verwalten und integrieren</summary>
+  <summary xml:lang="pt">Gerir e integrar aplicações AppImage no ambiente de trabalho</summary>
+  <summary xml:lang="it">Gestisci e integra le applicazioni AppImage nel desktop</summary>
+  <summary xml:lang="ro">Gestionați și integrați aplicațiile AppImage pe desktop</summary>
+  <summary xml:lang="ru">Управление и интеграция приложений AppImage на рабочий стол</summary>
 
   <description>
     <p>
@@ -15,6 +32,43 @@
       Linux desktop. It moves AppImages to ~/AppImages/, extracts their icon
       and metadata, creates menu entries for them, and checks GitHub, GitLab
       and Codeberg for updates.
+    </p>
+    <p xml:lang="es">
+      El Gestor de AppImage de Soplos integra aplicaciones AppImage en el escritorio
+      de Soplos Linux. Mueve los paquetes a ~/AppImages/, extrae sus iconos y metadatos,
+      crea accesos en el menú de aplicaciones y comprueba actualizaciones en GitHub,
+      GitLab y Codeberg.
+    </p>
+    <p xml:lang="fr">
+      Le gestionnaire d'AppImage de Soplos intègre les applications AppImage sur le
+      bureau Soplos Linux. Il déplace les fichiers vers ~/AppImages/, extrait leurs icônes
+      et métadonnées, crée des entrées de menu et vérifie les mises à jour sur GitHub,
+      GitLab et Codeberg.
+    </p>
+    <p xml:lang="de">
+      Die Soplos AppImage-Verwaltung integriert AppImage-Anwendungen in den Soplos Linux
+      Desktop. Sie verschiebt Dateien nach ~/AppImages/, extrahiert Icons und Metadaten,
+      erstellt Menüeinträge und prüft GitHub, GitLab und Codeberg auf Aktualisierungen.
+    </p>
+    <p xml:lang="pt">
+      O Gestor de AppImage do Soplos integra aplicações AppImage no ambiente de trabalho
+      do Soplos Linux. Move os ficheiros para ~/AppImages/, extrai ícones e metadados,
+      cria entradas de menu e verifica atualizações no GitHub, GitLab e Codeberg.
+    </p>
+    <p xml:lang="it">
+      Il Gestore AppImage di Soplos integra le applicazioni AppImage nel desktop di
+      Soplos Linux. Sposta i file in ~/AppImages/, estrae icone e metadati, crea voci
+      di menu e controlla gli aggiornamenti su GitHub, GitLab e Codeberg.
+    </p>
+    <p xml:lang="ro">
+      Managerul AppImage Soplos integrează aplicațiile AppImage pe desktopul Soplos Linux.
+      Mută fișierele în ~/AppImages/, extrage pictogramele și metadatele, creează intrări
+      în meniu și verifică actualizările pe GitHub, GitLab și Codeberg.
+    </p>
+    <p xml:lang="ru">
+      Менеджер AppImage Soplos интегрирует приложения AppImage в рабочий стол Soplos Linux.
+      Перемещает файлы в ~/AppImages/, извлекает значки и метаданные, создаёт пункты меню
+      и проверяет обновления на GitHub, GitLab и Codeberg.
     </p>
   </description>
 
@@ -24,22 +78,62 @@
     <screenshot type="default">
       <image>screenshot01.png</image>
       <caption>Main window with the hero banner and an integrated AppImage</caption>
+      <caption xml:lang="es">Ventana principal con el panel superior y una AppImage integrada</caption>
+      <caption xml:lang="en">Main window with the hero banner and an integrated AppImage</caption>
+      <caption xml:lang="fr">Fenêtre principale avec la bannière et une AppImage intégrée</caption>
+      <caption xml:lang="de">Hauptfenster mit Hero-Banner und einer integrierten AppImage</caption>
+      <caption xml:lang="pt">Janela principal com o painel superior e uma AppImage integrada</caption>
+      <caption xml:lang="it">Finestra principale con banner superiore e un'AppImage integrata</caption>
+      <caption xml:lang="ro">Fereastra principală cu panoul superior și o AppImage integrată</caption>
+      <caption xml:lang="ru">Главное окно с верхним баннером и интегрированным AppImage</caption>
     </screenshot>
     <screenshot>
       <image>screenshot02.png</image>
       <caption>Editing an AppImage's name, version, description and categories</caption>
+      <caption xml:lang="es">Edición del nombre, versión, descripción y categorías de una AppImage</caption>
+      <caption xml:lang="en">Editing an AppImage's name, version, description and categories</caption>
+      <caption xml:lang="fr">Édition du nom, de la version, de la description et des catégories</caption>
+      <caption xml:lang="de">Bearbeiten von Name, Version, Beschreibung und Kategorien</caption>
+      <caption xml:lang="pt">Edição de nome, versão, descrição e categorias de uma AppImage</caption>
+      <caption xml:lang="it">Modifica di nome, versione, descrizione e categorie di un'AppImage</caption>
+      <caption xml:lang="ro">Editarea numelui, versiunii, descrierii și categoriilor unei AppImage</caption>
+      <caption xml:lang="ru">Редактирование названия, версии, описания и категорий AppImage</caption>
     </screenshot>
     <screenshot>
       <image>screenshot03.png</image>
       <caption>Choosing whether to move the original file or keep a copy when adding</caption>
+      <caption xml:lang="es">Elección entre mover el archivo original o conservar una copia al añadir</caption>
+      <caption xml:lang="en">Choosing whether to move the original file or keep a copy when adding</caption>
+      <caption xml:lang="fr">Choix entre déplacer le fichier original ou conserver une copie</caption>
+      <caption xml:lang="de">Auswahl zwischen Verschieben der Originaldatei oder Behalten einer Kopie</caption>
+      <caption xml:lang="pt">Escolha entre mover o ficheiro original ou manter uma cópia ao adicionar</caption>
+      <caption xml:lang="it">Scelta tra spostare il file originale o mantenerne una copia</caption>
+      <caption xml:lang="ro">Alegerea între mutarea fișierului original sau păstrarea unei copii</caption>
+      <caption xml:lang="ru">Выбор между перемещением исходного файла или сохранением копии</caption>
     </screenshot>
     <screenshot>
       <image>screenshot04.png</image>
       <caption>Several AppImages integrated, each with its own icon, size and version</caption>
+      <caption xml:lang="es">Varias AppImages integradas con icono, tamaño y versión individuales</caption>
+      <caption xml:lang="en">Several AppImages integrated, each with its own icon, size and version</caption>
+      <caption xml:lang="fr">Plusieurs AppImages intégrées avec icône, taille et version</caption>
+      <caption xml:lang="de">Mehrere integrierte AppImages mit jeweils eigenem Icon, Größe und Version</caption>
+      <caption xml:lang="pt">Várias AppImages integradas com ícone, tamanho e versão individuais</caption>
+      <caption xml:lang="it">Diverse AppImage integrate ciascuna con icona, dimensione e versione</caption>
+      <caption xml:lang="ro">Mai multe AppImage integrate cu pictogramă, dimensiune și versiune</caption>
+      <caption xml:lang="ru">Несколько интегрированных AppImage со значком, размером и версией</caption>
     </screenshot>
     <screenshot>
       <image>screenshot05.png</image>
       <caption>Trying to add an AppImage that's already installed</caption>
+      <caption xml:lang="es">Aviso al intentar añadir una AppImage que ya se encuentra instalada</caption>
+      <caption xml:lang="en">Trying to add an AppImage that's already installed</caption>
+      <caption xml:lang="fr">Avertissement lors de l'ajout d'une AppImage déjà installée</caption>
+      <caption xml:lang="de">Warnung beim Versuch, ein bereits installiertes AppImage hinzuzufügen</caption>
+      <caption xml:lang="pt">Aviso ao tentar adicionar uma AppImage que já está instalada</caption>
+      <caption xml:lang="it">Avviso quando si tenta di aggiungere un'AppImage già installata</caption>
+      <caption xml:lang="ro">Avertisment la încercarea de a adăuga o AppImage deja instalată</caption>
+      <caption xml:lang="ru">Предупреждение при попытке добавить уже установленный AppImage</caption>
     </screenshot>
   </screenshots>
 
@@ -54,6 +148,13 @@
   </developer>
 
   <releases>
+    <release version="3.0.0-1-beta" date="2026-10-19">
+      <description>
+        <p>Full 8-language internationalization across desktop launchers and AppStream metadata.</p>
+        <p>Added Unix manual page documentation (soplos-appimage-manager.1) installed to /usr/share/man/man1/.</p>
+        <p>Registered MIME type handlers for AppImage files and updated Debian packaging metadata.</p>
+      </description>
+    </release>
     <release version="3.0.0-beta" date="2026-10-03">
       <description>
         <p>First beta of Soplos AppImage Manager 3.0. Detects already-installed AppImages instead of creating duplicates, shows errors in a visible dialog, and fixes a memory exhaustion bug in metadata extraction along with several process-isolation issues when launching AppImages.</p>

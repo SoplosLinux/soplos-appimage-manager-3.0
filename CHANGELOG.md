@@ -2,6 +2,16 @@
 
 All notable changes to Soplos AppImage Manager are documented in this file.
 
+## [3.0.0-1-beta] - 2026-10-19
+
+### Added
+
+- Added Unix manual page documentation (`soplos-appimage-manager.1`) installed to `/usr/share/man/man1/`.
+- Full 8-language translations for desktop entry (`soplos-appimage-manager.desktop.hbs`) and AppStream metainfo.
+- Registered MIME type associations for standalone AppImage files (`application/x-iso9660-appimage`, `application/vnd.appimage`).
+- Packaged application screenshots into `/usr/share/doc/soplos-appimage-manager/screenshots/`.
+- Updated Debian packaging metadata and bumped project release to `3.0.0-1-beta`.
+
 ## [3.0.0-beta] - 2026-10-03
 
 First beta of Soplos AppImage Manager 3.0.

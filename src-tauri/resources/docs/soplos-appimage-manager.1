@@ -1,0 +1,48 @@
+.TH "SOPLOS-APPIMAGE-MANAGER" "1" "2026-10-19" "Soplos Linux" "User Commands"
+.SH NAME
+soplos-appimage-manager \- AppImage application manager and desktop integrator for Soplos Linux
+.SH SYNOPSIS
+.B soplos-appimage-manager
+[\fIOPTIONS\fR] [\fIFILE.AppImage\fR]
+.SH DESCRIPTION
+.B soplos-appimage-manager
+is the AppImage integration and management tool for Soplos Linux.
+Built with Tauri 2, Rust, and Svelte architecture, it enables users to seamlessly integrate standalone AppImage binaries into the desktop environment:
+.IP \[bu] 2
+Moves AppImages into the user's personal \fI~/AppImages/\fR directory or keeps a copy.
+.IP \[bu]
+Extracts icons and desktop metadata automatically via 7-Zip or internal extractor.
+.IP \[bu]
+Generates and installs freedesktop compliant \fI.desktop\fR menu entries into \fI~/.local/share/applications/\fR.
+.IP \[bu]
+Performs automatic update checks against GitHub, GitLab, Codeberg releases, and direct HTTP download URLs.
+.IP \[bu]
+Supports editing names, versions, descriptions, categories, and optional execution with elevated privileges.
+.IP \[bu]
+Monitors \fI~/AppImages/\fR in real time with an automatic filesystem watcher.
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.SH FILES
+.TP
+.I ~/AppImages/
+Default storage directory for integrated AppImage applications.
+.TP
+.I ~/.local/share/applications/
+User desktop entries created for integrated AppImages.
+.TP
+.I ~/.config/soplos-appimage-manager/
+Application configuration and metadata cache.
+.SH AUTHOR
+Written by Sergi Perich <info@soploslinux.com> for the Soplos Linux project.
+.SH COPYRIGHT
+Copyright \(co 2026 Sergi Perich <info@soploslinux.com>.
+.br
+License: GPL-3.0-or-later <https://www.gnu.org/licenses/gpl-3.0.html>.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+.BR soplos-store (1),
+.BR soplos-welcome (1)
