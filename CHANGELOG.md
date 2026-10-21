@@ -2,6 +2,25 @@
 
 All notable changes to Soplos AppImage Manager are documented in this file.
 
+## [3.0.0-2-beta] - 2026-10-22
+
+### Added
+
+- `CHANGELOG.md` is installed as `/usr/share/doc/soplos-appimage-manager/changelog.gz`.
+- AppStream metainfo: categories and keywords in the eight languages, the same ones as the desktop entry.
+- The Debian copyright now declares Lucide (ISC), used for the interface icons.
+- README: version, license, platform, Tauri, Rust and Svelte badges, and new sections on the three update methods (release APIs of GitHub, GitLab and Codeberg, direct download by modification date, and AppImageUpdate when installed), the recommended dependencies and where the files go.
+
+### Changed
+
+- Manual page rewritten: integration, metadata extraction, duplicate detection, customization, updates, live monitoring, the "Run as root" option, keyboard shortcuts and files. It is installed compressed, as `/usr/share/man/man1/soplos-appimage-manager.1.gz`.
+
+### Fixed
+
+- AppStream metainfo: the developer and project group identifiers were `org.soploslinux`. They are now `org.soplos`, matching the soplos.org domain and the other Soplos apps.
+- AppStream metainfo: the screenshots were bare file names instead of web addresses, so software centers could not show them and the file did not validate. They now use their `raw.githubusercontent.com` address.
+- Manual page no longer lists `~/.config/soplos-appimage-manager/`, which the application never used, and now lists `~/AppImages/.icons/`, where the extracted icons go.
+
 ## [3.0.0-1-beta] - 2026-10-19
 
 ### Added

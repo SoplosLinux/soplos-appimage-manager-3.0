@@ -1,39 +1,79 @@
-.TH "SOPLOS-APPIMAGE-MANAGER" "1" "2026-10-19" "Soplos Linux" "User Commands"
+.TH "SOPLOS-APPIMAGE-MANAGER" "1" "2026-10-21" "Soplos Linux" "User Commands"
 .SH NAME
-soplos-appimage-manager \- AppImage application manager and desktop integrator for Soplos Linux
+soplos-appimage-manager \- AppImage manager and desktop integrator for Soplos Linux
 .SH SYNOPSIS
 .B soplos-appimage-manager
-[\fIOPTIONS\fR] [\fIFILE.AppImage\fR]
+[\fIOPTIONS\fR]
 .SH DESCRIPTION
 .B soplos-appimage-manager
-is the AppImage integration and management tool for Soplos Linux.
-Built with Tauri 2, Rust, and Svelte architecture, it enables users to seamlessly integrate standalone AppImage binaries into the desktop environment:
+integrates standalone AppImage applications into the desktop.
+Built with Tauri 2, Rust, and Svelte, it moves AppImages into
+.IR ~/AppImages/ ,
+extracts their icon and metadata, creates a menu entry for them, and checks
+for updates:
 .IP \[bu] 2
-Moves AppImages into the user's personal \fI~/AppImages/\fR directory or keeps a copy.
+.B Integration:
+add an AppImage from a file dialog or by dragging it onto the window, and
+choose whether to move the file or keep a copy.
 .IP \[bu]
-Extracts icons and desktop metadata automatically via 7-Zip or internal extractor.
+.B Metadata extraction:
+icon, version, category and comment are read from the AppImage. 7-Zip is used
+when available, and the AppImage's own
+.B \-\-appimage-extract
+is used as a fallback, with an execution timeout.
 .IP \[bu]
-Generates and installs freedesktop compliant \fI.desktop\fR menu entries into \fI~/.local/share/applications/\fR.
+.B Duplicate detection:
+an AppImage with the same name and size as one already integrated is not added twice.
 .IP \[bu]
-Performs automatic update checks against GitHub, GitLab, Codeberg releases, and direct HTTP download URLs.
+.B Customization:
+edit the name, version, description, categories, update endpoint and the optional
+"Run as root" launch flag of any AppImage at any time.
 .IP \[bu]
-Supports editing names, versions, descriptions, categories, and optional execution with elevated privileges.
+.B Updates:
+check GitHub releases, GitLab releases, Codeberg or a custom HTTP URL, for a
+single application or for all of them.
 .IP \[bu]
-Monitors \fI~/AppImages/\fR in real time with an automatic filesystem watcher.
+.B Management:
+launch, re-integrate, update, or completely uninstall an AppImage together
+with its desktop entry and cached icon.
+.IP \[bu]
+.B Live monitoring:
+changes made inside
+.I ~/AppImages/
+are detected by a filesystem watcher and shown without restarting.
+.P
+Everything is done under the user's home directory. The only privileged action
+is the per-AppImage "Run as root" option, which launches that AppImage through
+.BR pkexec (1).
+Launched AppImages run detached from the manager, in their own process group.
+.P
+The interface is available in English, Spanish, German, French, Italian,
+Portuguese, Romanian and Russian. It starts in the system language and falls
+back to English.
 .SH OPTIONS
 .TP
 .B \-h, \-\-help
 Show summary of options.
+.SH KEYBOARD SHORTCUTS
+.TP
+.B F1
+About dialog.
+.TP
+.B Ctrl+N
+Add a new AppImage.
+.TP
+.B Ctrl+Q
+Quit the application.
 .SH FILES
 .TP
 .I ~/AppImages/
-Default storage directory for integrated AppImage applications.
+Storage directory for the integrated AppImages.
+.TP
+.I ~/AppImages/.icons/
+Icons extracted from the integrated AppImages.
 .TP
 .I ~/.local/share/applications/
-User desktop entries created for integrated AppImages.
-.TP
-.I ~/.config/soplos-appimage-manager/
-Application configuration and metadata cache.
+Desktop entries created for the integrated AppImages.
 .SH AUTHOR
 Written by Sergi Perich <info@soploslinux.com> for the Soplos Linux project.
 .SH COPYRIGHT
@@ -45,4 +85,5 @@ This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 .SH SEE ALSO
 .BR soplos-store (1),
-.BR soplos-welcome (1)
+.BR soplos-welcome (1),
+.BR soplos-sys-cleaner (1)

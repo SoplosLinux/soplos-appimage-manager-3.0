@@ -1,11 +1,15 @@
 # Soplos AppImage Manager 3.0
 
-[![License: GPL-3.0+](https://img.shields.io/badge/License-GPL--3.0%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/version-3.0.0--1--beta-green.svg)]()
+![Version](https://img.shields.io/badge/version-3.0.0--2--beta-blue)
+![License](https://img.shields.io/badge/license-GPL--3.0--or--later-green)
+![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
+![Tauri](https://img.shields.io/badge/Tauri-2-orange)
+![Rust](https://img.shields.io/badge/Rust-1.80+-orange)
+![Svelte](https://img.shields.io/badge/Svelte-4-red)
 
 Integrate AppImage applications into the Soplos Linux desktop.
 
-It moves AppImages into `~/AppImages/`, extracts their icon and metadata, creates a menu entry for them, and checks GitHub, GitLab and Codeberg for updates.
+It moves AppImages into `~/AppImages/`, extracts their icon and metadata, creates a menu entry for them, and checks for updates on GitHub, GitLab, Codeberg or any direct download address.
 
 ## Screenshots
 
@@ -35,8 +39,37 @@ sudo apt install soplos-appimage-manager
 - **Metadata extraction**: automatic extraction of application icon, version, category, and comment.
 - **Duplicate detection**: prevents duplicate entries when an AppImage with identical name/size is already integrated.
 - **Customization**: edit application metadata, categories, update endpoints, and privileged execution flags at any time.
-- **Updates**: check for updates against GitHub releases, GitLab releases, Codeberg, or custom HTTP URLs (single app or all apps).
+- **Updates**: check for updates for a single AppImage or for all of them. The method depends on the update address saved for each one (see below).
 - **Management**: launch, re-integrate, update, or completely uninstall AppImages along with their desktop files and cached icons.
+- **Live monitoring**: AppImages added to or removed from `~/AppImages/` outside the app are detected and shown without restarting.
+- **Run as root**: an optional per-AppImage launch flag that starts it through `pkexec`.
+
+### Update methods
+
+- **Releases of a repository**: when the update address is a GitHub, GitLab or Codeberg repository, the latest release is read from that site's API.
+- **Direct download**: when the address ends in `.AppImage`, the file's modification date on the server is compared with the installed one, and it is downloaded when newer. If the server gives no date, the download is offered.
+- **AppImageUpdate**: when no address is saved and `appimageupdatetool` (or `AppImageUpdate`) is installed, it uses the update information embedded in the AppImage.
+
+## Dependencies
+
+Everything the app needs is in the base system. These are recommended and installed with the package:
+
+- `p7zip-full`: fast, non-intrusive extraction of the icon and metadata. Without it the app falls back to the AppImage's own `--appimage-extract`, with a timeout.
+- `desktop-file-utils`: refreshes the applications menu database (`update-desktop-database`) after an entry is added or removed.
+- `libgtk-3-bin`: provides `gtk-launch`, used to start an AppImage through its menu entry.
+- `binutils` is also recommended by the package.
+
+`appimageupdatetool` is optional and only needed for the AppImageUpdate method.
+
+## Where things go
+
+| Path | Content |
+|---|---|
+| `~/AppImages/` | The integrated AppImages |
+| `~/AppImages/.icons/` | Icons extracted from them |
+| `~/.local/share/applications/` | The menu entry of each AppImage |
+
+Uninstalling an AppImage from the app removes its file, its icon and its menu entry.
 
 ## Keyboard shortcuts
 
