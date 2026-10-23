@@ -1,4 +1,5 @@
 mod commands;
+mod system_theme;
 pub(crate) mod utils;
 mod watcher;
 
@@ -24,6 +25,7 @@ pub fn run() {
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
+            system_theme::get_system_theme,
             commands::appimages::list_installed,
             commands::appimages::pick_appimage_file,
             commands::appimages::add_appimage,
