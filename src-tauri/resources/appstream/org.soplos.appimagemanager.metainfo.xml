@@ -204,6 +204,11 @@
   </developer>
 
   <releases>
+    <release version="3.0.0-4-beta" date="2026-10-28">
+      <description>
+        <p>New application icon, new hero image and new screenshots, taken with the interface in English.</p>
+      </description>
+    </release>
     <release version="3.0.0-3-beta" date="2026-10-23">
       <description>
         <p>The window follows the light or dark theme of the desktop (Xfce, Plasma and GNOME); the button of the window still lets you choose.</p>
