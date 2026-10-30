@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import { _, locale } from "svelte-i18n";
+  import WindowControls from "./components/WindowControls.svelte";
+  import { frameless, maximized } from "./lib/window";
   import { getVersion } from "@tauri-apps/api/app";
   import { getCurrentWindow } from "@tauri-apps/api/window";
   import { listen, type UnlistenFn } from "@tauri-apps/api/event";
@@ -34,6 +36,9 @@
 
   let envInfo = { desktopEnvironment: "unknown", displayProtocol: "unknown" };
   let appVersion = "";
+  // "3.0.0-1-beta" → "3.0.0-beta": the footer shows the app version, not the
+  // Debian package revision.
+  $: cleanVersion = appVersion.replace(/-\d+-/, "-");
   let unlistenChanged: UnlistenFn | null = null;
   let unlistenDragDrop: UnlistenFn | null = null;
 
@@ -189,14 +194,21 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class="relative flex flex-col h-screen overflow-hidden">
+<div class="h-screen bg-dark {$frameless && !$maximized ? 'window-card' : ''}">
+<div class="relative flex flex-col h-full overflow-hidden">
   {#if isDraggingOver}
     <div class="absolute inset-0 z-40 border-2 border-dashed border-primary bg-primary/10 flex items-center justify-center pointer-events-none">
       <p class="text-[0.95rem] font-semibold text-primary">{$_("appimage.dropHint")}</p>
     </div>
   {/if}
 
-  <div class="p-4 pb-0 shrink-0">
+  {#if $frameless}
+    <div class="relative h-7 shrink-0" data-tauri-drag-region>
+      <div class="absolute right-2 top-[3px]"><WindowControls /></div>
+    </div>
+  {/if}
+
+  <div class="p-4 pb-0 shrink-0 {$frameless ? 'pt-0' : ''}" data-tauri-drag-region="deep">
     <div
       class="relative rounded border border-border overflow-hidden flex flex-col items-start justify-end p-4 min-h-[110px]"
       style="background: linear-gradient(rgba(20, 20, 22, 0.25), rgba(20, 20, 22, 0.82)), url('/assets/hero/appimage-manager-background.jpg'); background-size: cover; background-position: center;"
@@ -269,7 +281,7 @@
       on:click={() => (aboutOpen = true)}
       title={$_("sidebar.aboutTooltip")}
     >
-      {appVersion}
+      {cleanVersion}
     </button>
   </footer>
 </div>
@@ -367,3 +379,4 @@
     </div>
   </div>
 {/if}
+</div>

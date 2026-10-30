@@ -3426,7 +3426,7 @@ dependencies = [
 
 [[package]]
 name = "soplos-appimage-manager"
-version = "3.0.0-4-beta"
+version = "3.0.0-5-beta"
 dependencies = [
  "base64 0.22.1",
  "httpdate",
