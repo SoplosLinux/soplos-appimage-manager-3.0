@@ -2,6 +2,16 @@
 
 All notable changes to Soplos AppImage Manager are documented in this file.
 
+## [3.0.0-6-beta] - 2026-11-04
+
+### Fixed
+
+- The application metadata points to the launcher that the package installs, `soplos-appimage-manager.desktop`, so the software centers link the entry of the menu with the program.
+
+### Changed
+
+- New screenshot of the list of AppImages.
+
 ## [3.0.0-5-beta] - 2026-10-29
 
 ### Changed

@@ -128,7 +128,7 @@
     <keyword xml:lang="ru">менеджер</keyword>
   </keywords>
 
-  <launchable type="desktop-id">org.soplos.appimagemanager.desktop</launchable>
+  <launchable type="desktop-id">soplos-appimage-manager.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">
@@ -204,6 +204,11 @@
   </developer>
 
   <releases>
+    <release version="3.0.0-6-beta" date="2026-11-04">
+      <description>
+        <p>The application metadata points to the installed launcher, and there is a new screenshot of the list of AppImages.</p>
+      </description>
+    </release>
     <release version="3.0.0-5-beta" date="2026-10-29">
       <description>
         <p>The window no longer has the frame of the system: it is a card with rounded corners and its own minimize, maximize and close buttons.</p>
