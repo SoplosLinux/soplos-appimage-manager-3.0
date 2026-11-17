@@ -2,6 +2,10 @@
 
 All notable changes to Soplos AppImage Manager are documented in this file.
 
+## [3.0.0] - 2026-11-17
+
+First stable release.
+
 ## [3.0.0-6-beta] - 2026-11-04
 
 ### Fixed
