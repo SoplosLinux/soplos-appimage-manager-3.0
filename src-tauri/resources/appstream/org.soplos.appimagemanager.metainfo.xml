@@ -84,48 +84,56 @@
     <keyword>integration</keyword>
     <keyword>package</keyword>
     <keyword>manager</keyword>
+    <keyword>soplos</keyword>
     <keyword xml:lang="es">appimage</keyword>
     <keyword xml:lang="es">aplicación</keyword>
     <keyword xml:lang="es">instalar</keyword>
     <keyword xml:lang="es">integración</keyword>
     <keyword xml:lang="es">paquete</keyword>
     <keyword xml:lang="es">gestor</keyword>
+    <keyword xml:lang="es">soplos</keyword>
     <keyword xml:lang="fr">appimage</keyword>
     <keyword xml:lang="fr">application</keyword>
     <keyword xml:lang="fr">installer</keyword>
     <keyword xml:lang="fr">intégration</keyword>
     <keyword xml:lang="fr">paquet</keyword>
     <keyword xml:lang="fr">gestionnaire</keyword>
+    <keyword xml:lang="fr">soplos</keyword>
     <keyword xml:lang="de">appimage</keyword>
     <keyword xml:lang="de">anwendung</keyword>
     <keyword xml:lang="de">installieren</keyword>
     <keyword xml:lang="de">integration</keyword>
     <keyword xml:lang="de">paket</keyword>
     <keyword xml:lang="de">verwaltung</keyword>
+    <keyword xml:lang="de">soplos</keyword>
     <keyword xml:lang="pt">appimage</keyword>
     <keyword xml:lang="pt">aplicação</keyword>
     <keyword xml:lang="pt">instalar</keyword>
     <keyword xml:lang="pt">integração</keyword>
     <keyword xml:lang="pt">pacote</keyword>
     <keyword xml:lang="pt">gestor</keyword>
+    <keyword xml:lang="pt">soplos</keyword>
     <keyword xml:lang="it">appimage</keyword>
     <keyword xml:lang="it">applicazione</keyword>
     <keyword xml:lang="it">installare</keyword>
     <keyword xml:lang="it">integrazione</keyword>
     <keyword xml:lang="it">pacchetto</keyword>
     <keyword xml:lang="it">gestore</keyword>
+    <keyword xml:lang="it">soplos</keyword>
     <keyword xml:lang="ro">appimage</keyword>
     <keyword xml:lang="ro">aplicație</keyword>
     <keyword xml:lang="ro">instalare</keyword>
     <keyword xml:lang="ro">integrare</keyword>
     <keyword xml:lang="ro">pachet</keyword>
     <keyword xml:lang="ro">manager</keyword>
+    <keyword xml:lang="ro">soplos</keyword>
     <keyword xml:lang="ru">appimage</keyword>
     <keyword xml:lang="ru">приложение</keyword>
     <keyword xml:lang="ru">установка</keyword>
     <keyword xml:lang="ru">интеграция</keyword>
     <keyword xml:lang="ru">пакет</keyword>
     <keyword xml:lang="ru">менеджер</keyword>
+    <keyword xml:lang="ru">soplos</keyword>
   </keywords>
 
   <launchable type="desktop-id">soplos-appimage-manager.desktop</launchable>
